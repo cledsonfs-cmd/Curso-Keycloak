@@ -2,8 +2,6 @@ package com.course.cqrs.proto_api.controllers;
 
 
 import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -69,5 +67,5 @@ public class PeopleController {
     @GetMapping("/by-name/{name}")
     public ResponseEntity<List<Person>> getPeopleByName(@PathVariable("name") String name) {        
         return ResponseEntity.ok(peopleService.getPeopleByName(name));
-    }
+    }    
 }
